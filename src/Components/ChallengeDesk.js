@@ -9,7 +9,7 @@ export default function ChallengeDesk() {
     const [active3, setActive3] = useState(false);
     const [active5, setActive5] = useState(false);
     const [active6, setActive6] = useState(false);
-   
+
     return (
         // The section of Challenge Desk included 2 columns.
         // First columns is illustration of world wide trading. The second column is a description about Jacfold Challenge and trading mechanism.
@@ -36,7 +36,7 @@ export default function ChallengeDesk() {
                         <div className="how-to-container" id="how-to-1">
                             <div className="line-area">
                                 <div className="dot">
-
+                                    1
                                 </div>
                                 <div className="line2">
 
@@ -54,7 +54,7 @@ export default function ChallengeDesk() {
                         }}>
                             <div className="line-area">
                                 <div className="dot">
-
+                                    2
                                 </div>
                                 <div className="line2">
 
@@ -72,7 +72,7 @@ export default function ChallengeDesk() {
                         }}>
                             <div className="line-area">
                                 <div className="dot">
-
+                                    3
                                 </div>
                                 <div className="line2">
 
@@ -90,7 +90,7 @@ export default function ChallengeDesk() {
                         }}>
                             <div className="line-area">
                                 <div className="dot">
-
+                                    4
                                 </div>
                                 <div className="line2">
 
@@ -112,7 +112,7 @@ export default function ChallengeDesk() {
                         <div className="how-to-container" id="how-to-1">
                             <div className="line-area">
                                 <div className="dot">
-
+                                    1
                                 </div>
                                 <div className="line3">
 
@@ -130,7 +130,7 @@ export default function ChallengeDesk() {
                         }}>
                             <div className="line-area">
                                 <div className="dot">
-
+                                    2
                                 </div>
                                 <div className="line3">
 
@@ -148,7 +148,7 @@ export default function ChallengeDesk() {
                         }}>
                             <div className="line-area">
                                 <div className="dot">
-
+                                    3
                                 </div>
                                 <div className="line3">
 
@@ -160,7 +160,7 @@ export default function ChallengeDesk() {
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>

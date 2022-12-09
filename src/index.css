@@ -19,6 +19,7 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *,
 *:before,
@@ -34,7 +35,7 @@ body {
   height: 100vh;
   overflow: overlay;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lexend', sans-serif;
   /* font-family: "Calibri"; */
 }
 
@@ -255,7 +256,7 @@ header .header-container .button-area #getStartedBtn {
   justify-content: center;
   align-items: center;
   width: 1320px;
-  height: 90vh;
+  height: 93vh;
 }
 
 .slogan {
@@ -269,7 +270,7 @@ header .header-container .button-area #getStartedBtn {
   flex-direction: column;
   width: 760px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 48px;
 
 }
@@ -386,6 +387,7 @@ header .header-container .button-area #getStartedBtn {
   align-items: center;
   gap: 72px;
   width: 1320px;
+  height: 100vh;
 
 }
 
@@ -418,10 +420,16 @@ header .header-container .button-area #getStartedBtn {
 }
 
 .how-to-work .line-container .dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 90px;
   background-color: white;
+  color: black;
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .how-to-work .line-container .line2 {
@@ -521,6 +529,7 @@ header .header-container .button-area #getStartedBtn {
   align-items: center;
   gap: 35px;
   padding: 30px;
+  height: 93vh;
 }
 
 .sign-in-container {
@@ -535,6 +544,16 @@ header .header-container .button-area #getStartedBtn {
 
   border-radius: 20px;
   padding: 25px;
+}
+
+.sign-in-area {
+  background: rgb(43, 49, 57, 0.4);
+  border-radius: 16px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sign-in-page-header {
@@ -586,7 +605,10 @@ header .header-container .button-area #getStartedBtn {
 .form-area {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  grid-gap: 24px;
   gap: 24px;
+  align-items: center;
 }
 
 .form-area form {
@@ -625,7 +647,12 @@ header .header-container .button-area #getStartedBtn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-gap: 24px;
   gap: 24px;
+  background: rgb(43, 49, 57, 0.4);
+  width: 561px;
+  height: 65vh;
+  border-radius: 16px;
 }
 
 .logo-area {
@@ -1191,11 +1218,13 @@ header .header-container .button-area #getStartedBtn {
   gap: 25px;
 }
 
+
 .cards-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 36px;
+
 }
 
 .cards-area .column {
@@ -1213,19 +1242,20 @@ header .header-container .button-area #getStartedBtn {
   align-items: center;
   height: 324px;
   width: 285px;
-  background: rgba(47, 50, 65, 0.5);
+  background: rgb(243, 191, 0, 0.9);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border-radius: 18px;
   gap: 24px;
   padding: 12px;
   border: 2px solid rgb(243, 191, 0);
+  color: #151515;
+  box-shadow: inset 0px 0px 1px 5px rgb(0 0 0 / 75%)
 }
 
 .cards-area .card:hover {
-  transition: 0.6s;
-  background: rgb(243, 191, 0, 1);
-  color: #151515;
+  background-color: black;
+  color: rgb(203, 202, 202);
 }
 
 .card-title {
@@ -1246,8 +1276,20 @@ header .header-container .button-area #getStartedBtn {
 .why-ribu-title {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   font-size: 128px;
+  margin-bottom: 90px;
+}
+
+.ribu-bigger-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ribu-bigger-logo img {
+  zoom: 0.3;
 }
 
 
@@ -1397,9 +1439,16 @@ header .header-container .button-area #getStartedBtn {
 
 .roadmap {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  margin-top: 120px;
+  gap: 120px;
+}
+
+.roadmap .title {
+  font-size: 36px;
 }
 
 .roadmap .roadmap-container {
@@ -1537,6 +1586,85 @@ header .header-container .button-area #getStartedBtn {
   display: flex;
 }
 
+.congrats-card {
+  width: 1085px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 65vh;
+  border: 3px solid rgb(243, 191, 0);
+  border-radius: 12px;
+  gap: 18px;
+}
+
+.congrats-card .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(43, 49, 57);
+  width: 100%;
+  padding: 8px;
+}
+
+.congrats-card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats-card .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.congrats-card .description-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: forestgreen;
+  border-radius: 12px;
+  height: 24px;
+}
+
+.congrats-card .card-bottom {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 40px;
+  gap: 40px;
+  border: 3px solid rgb(43, 49, 57, 1);
+  border-radius: 12px;
+  width: 60%;
+  height: 68%;
+  justify-content: center;
+  align-items: center;
+  background: rgb(43, 49, 57, 0.2);
+}
+
+.congrats-card .bottom-title {
+  font-size: 21px;
+  text-align: center;
+}
+
+.congrats-card .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats-card .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
 
 
 /*                       INTRO ROADMAP                 */
@@ -1552,6 +1680,14 @@ header .header-container .button-area #getStartedBtn {
   align-items: center;
   height: 100vh;
   gap: 36px;
+}
+
+.intro-roadmap .know-you-title {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .intro-roadmap .row {
@@ -2084,6 +2220,91 @@ header .header-container .button-area #getStartedBtn {
 
 .about-us-container {
   width: 720px;
+}
+
+
+/*                       PAYMENT AREA                  */
+/*                       //////                        */
+/*                       //////                        */
+
+
+
+.payment-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 1320px;
+  gap: 12px;
+}
+
+.payment-area .column {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  background: rgb(43, 49, 57, 0.4);
+  border-radius: 16px;
+  /* grid-gap: 92px; */
+  /* grid-gap: 113px; */
+  grid-gap: 72px;
+  gap: 48px;
+  width: 720px;
+  padding: 50px 16px;
+}
+
+.payment-area .row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+}
+
+.metamask-logo {
+zoom: 0.1;
+}
+
+.width164px {
+  width: 164px;
+}
+
+.fja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-area .row .title {
+  font-size: 54px;
+}
+
+.payment-area .row .description .buttons-area {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-area .input-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-area .form-area input[type="text"] {
+  width: 360px;
+}
+
+.payment-area .form-area form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 

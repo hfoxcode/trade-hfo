@@ -77,10 +77,6 @@ export default function Header() {
                                 <li>Pricing</li>
                             </Link>
 
-                            <Link to="education">
-                                <li>Education</li>
-                            </Link>
-
                             <Link to="user-dashboard">
                                 <li>User Dashboard</li>
                             </Link>
@@ -101,6 +97,10 @@ export default function Header() {
 
                             <Link to="intro-roadmap">
                                 <li>Intro Roadmap</li>
+                            </Link>
+
+                            <Link to="payment-area">
+                                <li>Payment Area</li>
                             </Link>
 
                             <li>

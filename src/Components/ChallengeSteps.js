@@ -1,4 +1,6 @@
 import React from "react"
+import Logo from "../img/Logo.png"
+import RibuBiggerLogo from "../img/ribu-bigger-logo.png"
 
 
 export default function WhyRibu() {
@@ -12,8 +14,8 @@ export default function WhyRibu() {
             <div className="why-ribu-container">
 
                 <div className="why-ribu-title">
-                    <div className="why-ribu-slogan">Why</div>
-                    <div className="why-ribu-slogan">Ribu?</div>
+                    <div className="ribu-bigger-logo"><img src={RibuBiggerLogo} alt="ribu logo"/></div>
+                    <div className="why-ribu-slogan">Why Ribu?</div>
                 </div>
 
                 <div className="cards-area">

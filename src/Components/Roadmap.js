@@ -5,6 +5,9 @@ import EducationPopup from "./EducationPopup"
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
 import Quiz from "./Quiz";
+import Confetti from "../img/confetti.png";
+import PartyPopper from "../img/party-popper.png";
+import Quiz2Icon from "../img/quiz_2_icon.png";
 
 export default function Roadmap() {
     const [openEducationPopup, setOpenEducationPopup] = useState(false);
@@ -17,7 +20,7 @@ export default function Roadmap() {
         if (!open) return null
 
         return (
-            <div onClick={onClose} className="overlay">
+            <div className="overlay">
                 <div onClick={(e) => {
                     e.stopPropagation()
                 }} className="popup_container">
@@ -30,16 +33,79 @@ export default function Roadmap() {
                         onStateChange={(e) => checkElapsedTime(e)}
                     />
                     : whichStep === 2 ?
-                        <YouTube
-                            videoId="m2BD4rih4wU"
-                            onStateChange={(e) => checkElapsedTime(e)}
-                        />
-                        : whichStep === 3 ?
-                            <div className="quiz-area">
-                                <iframe name='proprofs' id='proprofs' width='800px' height='700px' frameborder="0" marginwidth="0" marginheight="0" src='https://www.proprofs.com/quiz-school/ugc/story.php?title=mzyxnjm1mazcjj&id=3618552&ew=430'></iframe>
-                            </div>
 
-                            : null}
+                        <div className="congrats-card">
+                            <div className="title">Tebrikler</div>
+                            <div className="card-bottom">
+                                <div className="bottom-title">1. aşamayı tamamladın.</div>
+                                <div className="image"><img src={PartyPopper}></img></div>
+                                <div className="description">
+                                    <div className="row">
+
+                                        <div className="description-bar-title">İlerleme Durumun</div>
+                                        <div className="description-bar">%60</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div onClick={() => setWhichStep(3)} className="button">Next</div>
+
+
+                        </div>
+
+                        : whichStep === 3 ?
+                            <YouTube
+                                videoId="m2BD4rih4wU"
+                                onStateChange={(e) => checkElapsedTime(e)}
+                            />
+                            : whichStep === 4 ?
+
+                                <div className="congrats-card">
+                                    <div className="title">Şimdi Quiz Zamanı</div>
+                                    <div className="card-bottom">
+                                        <div className="bottom-title">Öğrendiklerini pekiştirmek için Quiz'e başla!</div>
+                                        <div className="image"><img src={Quiz2Icon}></img></div>
+                                        <div className="description">
+                                            <div className="row">
+
+                                                <div className="description-bar-title">İlerleme Durumun</div>
+                                                <div className="description-bar">%60</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div onClick={() => setWhichStep(5)} className="button">Next</div>
+
+
+                                </div>
+
+                                : whichStep === 5 ?
+                                    <div className="quiz-area">
+                                        <iframe name='proprofs' id='proprofs' width='800px' height='700px' frameborder="0" marginwidth="0" marginheight="0" src='https://www.proprofs.com/quiz-school/ugc/story.php?title=mzyxnjm1mazcjj&id=3618552&ew=430'></iframe>
+                                    </div>
+
+                                    : whichStep === 6 ?
+
+                                        <div className="congrats-card">
+                                            <div className="title">Tebrikler! Eğitimi tamamladın.</div>
+                                            <div className="card-bottom">
+                                                <div className="bottom-title">Şimdi hemen challenge aşamasına geçerek trade etmeye başlayabilirsin!</div>
+                                                <div className="image"><img src={Quiz2Icon}></img></div>
+                                                <div className="description">
+                                                    <div className="row">
+
+                                                        <div className="description-bar-title">İlerleme Durumun</div>
+                                                        <div className="description-bar">%60</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div className="button">Challenge</div>
+
+
+                                        </div>
+
+                                        : null}
 
 
 
@@ -56,6 +122,8 @@ export default function Roadmap() {
             } else if (whichStep === 1) {
                 setRoadmapStep(2);
                 setWhichStep(2);
+            } else if (whichStep === 3) {
+                setWhichStep(4);
             }
 
             console.log(roadmapStep);
@@ -67,7 +135,11 @@ export default function Roadmap() {
 
     return (
         <section className="roadmap">
+            <div className="title">İlk Adım: Eğitimi Tamamla!</div>
             <div className="roadmap-container">
+
+
+
                 <div className="row" >
                     <div className="box" onMouseEnter={() => setStepActive(1)} onMouseLeave={() => setStepActive(0)} onClick={() => {
                         setOpenEducationPopup(true);
@@ -135,6 +207,10 @@ export default function Roadmap() {
 
                         </div>
                     </div>
+
+
+
+
                     <div className="box" onMouseEnter={() => setStepActive(3)} onMouseLeave={() => setStepActive(0)} onClick={() => {
                         setOpenEducationPopup(true);
                     }
@@ -147,7 +223,7 @@ export default function Roadmap() {
                             </div>
                             : roadmapStep === 1 || 2 ?
                                 <div className="image-container step-count borderPurple">
-                                    <img src={QuizIcon} alt="lock icon" />
+                                    <img src={LockIcon} alt="lock icon" />
                                 </div>
                                 : null
                         }
@@ -170,7 +246,7 @@ export default function Roadmap() {
                     <div className="horizontal-line"></div>
                 </div>
                 <div className="row">
-                    <div className="box">
+                    <div className="box" onClick={() => setWhichStep(6)}>
                         <div className="image-container">
                             <img src={LockIcon} alt="lock icon" />
                         </div>

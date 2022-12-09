@@ -192,7 +192,7 @@ export default function Login() {
                             </div>
                         </div>
 
-                        <div className="sign-in-area">
+                        <div className="login-area">
                             <input type="submit" name="submit" id="submit" class="Sing In" value="Sign In" />
                         </div>
 

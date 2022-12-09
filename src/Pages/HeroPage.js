@@ -10,7 +10,6 @@ export default function HeroPage() {
             <HeroContainer />
             <ChallengeDesk />
             <ChallengeSteps />
-            <Confidence />
         </>
 
     )

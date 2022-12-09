@@ -30,6 +30,7 @@ import QuizPage from "./Pages/QuizPage";
 import UserDashboardPage from "./Pages/UserDashboardPage";
 import Roadmap from "./Components/Roadmap";
 import IntroRoadmap from "./Components/IntroRoadmap";
+import PaymentArea from "./Components/PaymentArea";
 
 function Layout() {
   return <div className='App'>
@@ -57,6 +58,7 @@ function App() {
           <Route path="roadmap" element={<Roadmap/>}/>
           <Route path="intro-roadmap" element={<IntroRoadmap/>}/>
           <Route path="pro" element={<ProPage/>}/>
+          <Route path="payment-area" element={<PaymentArea/>}/>
           <Route path="how-it-works" element={<HowItWorks/>}/>
           <Route path="about-us" element={<AboutUs/>}/>
           <Route path="post-request" element={<PostRequest/>}/>

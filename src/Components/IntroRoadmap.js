@@ -26,6 +26,9 @@ export default function IntroRoadmap() {
     return (
         <section className={activeRow === 1 || activeRow === 2 ? "intro-roadmap heightone" : "intro-roadmap"} >
             <div className="row">
+                <div className="know-you-title"> Ribu ile ilk yolculuğuna başlamadan önce seni daha iyi tanıyıp yardımcı olabilmemiz için bize biraz kendinden bahseder misin?</div>
+            </div>
+            <div className="row">
                 <div className="title">Sen Kimsin?</div>
                 <div className="card-container">
                     <div className="card" onClick={() => setActiveRow(1)}>Acemi</div>

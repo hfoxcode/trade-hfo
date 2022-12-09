@@ -1,5 +1,9 @@
 import React from "react"
 import InstagramLogo from "../img/instagram.png"
+import TwitterIcon from "../img/twitter-icon.png"
+import YoutubeIcon from "../img/youtube-icon.png"
+import TelegramIcon from "../img/telegram-icon.png"
+import DiscordIcon from "../img/discord-icon.png"
 
 export default function Footer() {
     return (
@@ -18,11 +22,10 @@ export default function Footer() {
             </div>
             
             <div className="logos" id="social_media_icons">
-                <img src={InstagramLogo} alt="instagram logo"></img>
-                <img src={InstagramLogo} alt="instagram logo"></img>
-                <img src={InstagramLogo} alt="instagram logo"></img>
-                <img src={InstagramLogo} alt="instagram logo"></img>
-                <img src={InstagramLogo} alt="instagram logo"></img>
+                <img src={TwitterIcon} alt="instagram logo"></img>
+                <img src={YoutubeIcon} alt="instagram logo"></img>
+                <img src={DiscordIcon} alt="instagram logo"></img>
+                <img src={TelegramIcon} alt="instagram logo"></img>
             </div>
         </div>
         <div className="column">
