@@ -68,7 +68,7 @@ export default function Header() {
             <header>
                 <ul className="header-container">
                     <li className="logo-container">
-                        <Link to="/">
+                        <Link to="/trade-hfo">
                             <div className="logo-area">
                                 <img src={Logo} alt="Logo" />
 
