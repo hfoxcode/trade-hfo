@@ -1,7 +1,7 @@
 {
   "main.css": "/trade-hfo/static/css/main.d6eb3160.chunk.css",
-  "main.js": "/trade-hfo/static/js/main.69b80552.chunk.js",
-  "main.js.map": "/trade-hfo/static/js/main.69b80552.chunk.js.map",
+  "main.js": "/trade-hfo/static/js/main.1a51fbe0.chunk.js",
+  "main.js.map": "/trade-hfo/static/js/main.1a51fbe0.chunk.js.map",
   "static/js/1.d48f06b5.chunk.js": "/trade-hfo/static/js/1.d48f06b5.chunk.js",
   "static/js/1.d48f06b5.chunk.js.map": "/trade-hfo/static/js/1.d48f06b5.chunk.js.map",
   "static/js/2.b1cb14a8.chunk.js": "/trade-hfo/static/js/2.b1cb14a8.chunk.js",
@@ -39,6 +39,6 @@
   "static/media/stat-image.png": "/trade-hfo/static/media/stat-image.c9b475d2.png",
   "static/css/main.d6eb3160.chunk.css.map": "/trade-hfo/static/css/main.d6eb3160.chunk.css.map",
   "index.html": "/trade-hfo/index.html",
-  "precache-manifest.d11653be30e753773151940703e07397.js": "/trade-hfo/precache-manifest.d11653be30e753773151940703e07397.js",
+  "precache-manifest.41fa51a1ae490b33fc6d3b4fbe1a38be.js": "/trade-hfo/precache-manifest.41fa51a1ae490b33fc6d3b4fbe1a38be.js",
   "service-worker.js": "/trade-hfo/service-worker.js"
 }

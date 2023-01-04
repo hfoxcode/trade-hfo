@@ -141,7 +141,7 @@ export default function Header() {
                             <>
                                 <Link to="user-dashboard">
                                     <li>
-                                        <div className="tooltip-container-div" onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
+                                        <div className="tooltip-container-div" onMouseClick={() => setShowTooltip(true)}>
                                             <img src={userAvatar} alt="user avatar" />
                                             {showTooltip && (
                                                 <Tooltip content="This is a tooltip">
