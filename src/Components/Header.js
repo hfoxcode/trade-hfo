@@ -139,20 +139,22 @@ export default function Header() {
 
                         {username ? (
                             <>
-                                <Link to="user-dashboard">
-                                    <li>
-                                        <div className="tooltip-container-div" onMouseClick={() => setShowTooltip(true)}>
-                                            <img src={userAvatar} alt="user avatar" />
-                                            {showTooltip && (
-                                                <Tooltip content="This is a tooltip">
-                                                    <div onClick={() => handleLogout()}>Logout</div>
-                                                </Tooltip>
-                                            )}
-                                        </div>
 
-                                    </li>
+                                <li>
+                                    <div className="tooltip-container-div" onMouseClick={() => setShowTooltip(true)}>
+                                        <img src={userAvatar} alt="user avatar" />
+                                        {showTooltip && (
+                                            <Tooltip content="This is a tooltip">
+                                                <Link to="user-dashboard">
+                                                    <div>Profile</div>
+                                                </Link>
+                                                <div onClick={() => handleLogout()}>Logout</div>
+                                            </Tooltip>
+                                        )}
+                                    </div>
 
-                                </Link>
+                                </li>
+
                             </>
 
 
