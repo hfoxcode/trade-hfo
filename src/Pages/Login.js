@@ -114,7 +114,7 @@ export default function Login() {
     }
 
     function handleNavigate() {
-        window.location.replace("/");
+        window.location.replace("/index.html");
     }
 
 
