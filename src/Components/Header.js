@@ -145,7 +145,7 @@ export default function Header() {
                                             <img src={userAvatar} alt="user avatar" />
                                             {showTooltip && (
                                                 <Tooltip content="This is a tooltip">
-                                                    <div>Logout</div>
+                                                    <div onClick={() => handleLogout()}>Logout</div>
                                                 </Tooltip>
                                             )}
                                         </div>
