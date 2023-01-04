@@ -59,7 +59,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/trade-hfo' element={<Layout />} >
+        <Route path='/' element={<Layout />} >
           <Route index element={<HeroPage />} />
           <Route path="beginner" element={<BeginnerPage/>} />
           <Route path="challenger" element={<ChallengerPage/>}/>

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1a51fbe07041d45a82c5",
+    "revision": "69b80552cb3015932c1e",
     "url": "/trade-hfo/static/css/main.d6eb3160.chunk.css"
   },
   {
-    "revision": "1a51fbe07041d45a82c5",
-    "url": "/trade-hfo/static/js/main.1a51fbe0.chunk.js"
+    "revision": "69b80552cb3015932c1e",
+    "url": "/trade-hfo/static/js/main.69b80552.chunk.js"
   },
   {
     "revision": "d48f06b542086f619008",
@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "url": "/trade-hfo/static/media/stat-image.c9b475d2.png"
   },
   {
-    "revision": "78b53876db5535dfdc66cc69a27c1c08",
+    "revision": "7b03a045104a3cc6a5f0455a77bb500b",
     "url": "/trade-hfo/index.html"
   }
 ];
