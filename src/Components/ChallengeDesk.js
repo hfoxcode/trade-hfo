@@ -28,9 +28,9 @@ export default function ChallengeDesk() {
             </div> */}
 
             <div className="roadmap-container">
-                <div className="how-to-work">
+                <div className="how-to-work" id="howtowork">
                     <div className="title">
-                        Beginner
+                        Acemi
                     </div>
                     <div className="line-container">
                         <div className="how-to-container" id="how-to-1">
@@ -43,8 +43,8 @@ export default function ChallengeDesk() {
                                 </div>
                             </div>
                             <div className="description-steps" id="1">
-                                <div className="title">Complete the Education</div>
-                                <div className="description">We have prepared an comprehensive education set for those who do not know how to trade.</div>
+                                <div className="title">Eğitimi Tamamla</div>
+                                <div className="description">Nasıl trade edeceğini bilmeyenler için detaylı bir eğitim seti hazırladık.</div>
                             </div>
                         </div>
 
@@ -61,8 +61,8 @@ export default function ChallengeDesk() {
                                 </div>
                             </div>
                             <div className="description-steps" id="2">
-                                <div className="title">Pass the Quizzes</div>
-                                <div className="description">Complete special quizzes prepared for you. Get ready to start Ribu Challenges.</div>
+                                <div className="title">Quizleri Geç</div>
+                                <div className="description">Senin için profesyonel ekibimizce özel hazırlanmış quizleri başarıyla tamamla. Sertifikalı bir Ribu Trader olmaya hazırlan.</div>
                             </div>
                         </div>
 
@@ -79,8 +79,8 @@ export default function ChallengeDesk() {
                                 </div>
                             </div>
                             <div className="description-steps" id="3">
-                                <div className="title">Prove yourself</div>
-                                <div className="description">Prove yourself with challenges by choosing the package that suits you.</div>
+                                <div className="title">Kendini Kanıtla</div>
+                                <div className="description">Sana uyan challenge pakedini seçerek kendini kanıtla</div>
                             </div>
                         </div>
 
@@ -98,8 +98,8 @@ export default function ChallengeDesk() {
                             </div>
 
                             <div className="description-steps" id="4">
-                                <div className="title">Start to earn as a Professional</div>
-                                <div className="description">Now you are a certified Ribu Trader. Start making money by managing the fund defined for you.</div>
+                                <div className="title">Kazanmaya başla!</div>
+                                <div className="description">Artık sen de bir sertifikalı Ribu Trader'sın. Hesabına tamamlanan fonu yöneterek para kazanmaya başla!</div>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ export default function ChallengeDesk() {
                             </div>
                             <div className="description-steps" id="1">
                                 <div className="title">Discover</div>
-                                <div className="description">Discover is the first stage where you will try to prove yourself. Fulfill the tasks. Prove your trading skills and risk management. Go to step two!</div>
+                                <div className="description">Discover bize kendini kanıtlaman için sana sunulan ilk challenge adımı. Tüm görevleri tamamla. Trading yeteneklerini ve risk yönetimi başarını kanıtla. İkinci adıma geç!</div>
                             </div>
                         </div>
 
@@ -138,7 +138,7 @@ export default function ChallengeDesk() {
                             </div>
                             <div className="description-steps" id="2">
                                 <div className="title">Approve</div>
-                                <div className="description">You are now in the final stage before you become a registered Ribu trader. Complete tasks to become certified Ribu Trader and prepare to manage a real fund.</div>
+                                <div className="description">Artık sertifikalı Ribu Trader olmadan önceki son adımdasın. Sertifikalı Ribu Trader olmak için görevleri tamamla ve gerçek bir fon yönetmeye hazırlan!</div>
                             </div>
                         </div>
 
@@ -156,7 +156,7 @@ export default function ChallengeDesk() {
                             </div>
                             <div className="description-steps" id="3">
                                 <div className="title">Certified Ribu Trader</div>
-                                <div className="description">You are now a certified Ribu Trader too! Get up to 85% of your profits from consistently growing a real fund. If you can make steady profits, we will increase the fund you manage. Good Luck!</div>
+                                <div className="description">Artık sen de bir sertifikalı Ribu Trader'sın! Artık elde ettiğin karın %75-85'e varan kadarı senin. Eğer düzenli olarak kar elde etmeye devam edebilirsen, yönettiğin fonu daha da büyüteceğiz. Bol Şans!</div>
                             </div>
                         </div>
 

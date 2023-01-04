@@ -8,6 +8,7 @@ import Quiz from "./Quiz";
 import Confetti from "../img/confetti.png";
 import PartyPopper from "../img/party-popper.png";
 import Quiz2Icon from "../img/quiz_2_icon.png";
+import { Link } from "react-router-dom";
 
 export default function Roadmap() {
     const [openEducationPopup, setOpenEducationPopup] = useState(false);
@@ -134,146 +135,186 @@ export default function Roadmap() {
 
 
     return (
-        <section className="roadmap">
-            <div className="title">İlk Adım: Eğitimi Tamamla!</div>
-            <div className="roadmap-container">
-
-
-
-                <div className="row" >
-                    <div className="box" onMouseEnter={() => setStepActive(1)} onMouseLeave={() => setStepActive(0)} onClick={() => {
-                        setOpenEducationPopup(true);
-                    }
-
-                    }>
-
-                        {stepActive === 0 ?
-                            <div></div>
-                            : stepActive === 1 ?
-
-                                <div className="step-description">
-                                    Technical Analysis 101
-                                </div>
-                                : null
-                        }
-                        <div className="step-count">
-                            1
-                        </div>
-
-
-                    </div>
-
-                    <EducationPopup open={openEducationPopup} onClose={() => setOpenEducationPopup(false)} />
-
-
-
-                    <div className="line-area">
-                        <div className="line2">
-
-                        </div>
-                    </div>
-                    <div className="box" onMouseEnter={() => setStepActive(2)} onMouseLeave={() => setStepActive(0)} onClick={() => {
-                        setOpenEducationPopup(true);
-                    }
-
-
-                    }>
-                        {roadmapStep === 2 ?
-                            <div className="step-count">
-                                2
-                            </div>
-                            : roadmapStep === 1 ?
-                                <div className="image-container step-count">
-                                    <img src={LockIcon} alt="lock icon" />
-                                </div>
-                                : null
-                        }
-
-                        {stepActive === 0 ?
-                            <div></div>
-                            : stepActive === 2 ?
-
-                                <div className="step-description">
-                                    Trend Çizgileri Nedir?
-                                </div>
-                                : null
-                        }
-
-
-
-                    </div>
-                    <div className="line-area">
-                        <div className={roadmapStep === 2 ? "line2  bgcolorwhite" : "line2"}>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div className="box" onMouseEnter={() => setStepActive(3)} onMouseLeave={() => setStepActive(0)} onClick={() => {
-                        setOpenEducationPopup(true);
-                    }
-
-
-                    }>
-                        {roadmapStep === 3 ?
-                            <div className="step-count">
-                                3
-                            </div>
-                            : roadmapStep === 1 || 2 ?
-                                <div className="image-container step-count borderPurple">
-                                    <img src={LockIcon} alt="lock icon" />
-                                </div>
-                                : null
-                        }
-
-                        {stepActive === 0 ?
-                            <div></div>
-                            : stepActive === 3 ?
-
-                                <div className="step-description">
-                                    Quiz 1 : Teknik Analiz 101
-                                </div>
-                                : null
-                        }
-
-
-
-                    </div>
+        <section className="outline-roadmap">
+            <div className="column first-column">
+                <div className="option">
+                    <Link to="/user-dashboard">
+                        Profile
+                    </Link>
                 </div>
-                <div className="horizontal-line-area">
-                    <div className="horizontal-line"></div>
-                </div>
-                <div className="row">
-                    <div className="box" onClick={() => setWhichStep(6)}>
-                        <div className="image-container">
-                            <img src={LockIcon} alt="lock icon" />
-                        </div>
-                    </div>
-                    <div className="line-area">
-                        <div className="line2">
-
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="image-container">
-                            <img src={LockIcon} alt="lock icon" />
-                        </div>
-                    </div>
-                    <div className="line-area">
-                        <div className="line2">
-
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="image-container">
-                            <img src={LockIcon} alt="lock icon" />
-                        </div>
-                    </div>
+                <div className="option">
+                    <Link to="../roadmap">
+                        Roadmap
+                    </Link>
                 </div>
 
+
+                <div className="option">
+                    <Link to="../intro-roadmap">
+                        How To Start
+                    </Link>
+                </div>
+
+                <div className="option">
+                    <Link to="../certificates">
+                        Certificates
+                    </Link>
+                </div>
+
+                <div className="option">
+                    <Link to="../statistics">Statistics</Link>
+                </div>
+
+                <div className="option">
+                    <Link to="../leaderboard">Leaderboard</Link>
+                </div>
             </div>
+            <section className="roadmap-container">
+                <section className="roadmap">
+                    <div className="title">İlk Adım: Eğitimi Tamamla!</div>
+                    <div className="roadmap-container">
+
+
+
+                        <div className="row" >
+                            <div className="box" onMouseEnter={() => setStepActive(1)} onMouseLeave={() => setStepActive(0)} onClick={() => {
+                                setOpenEducationPopup(true);
+                            }
+
+                            }>
+
+                                {stepActive === 0 ?
+                                    <div></div>
+                                    : stepActive === 1 ?
+
+                                        <div className="step-description">
+                                            Technical Analysis 101
+                                        </div>
+                                        : null
+                                }
+                                <div className="step-count">
+                                    1
+                                </div>
+
+
+                            </div>
+
+                            <EducationPopup open={openEducationPopup} onClose={() => setOpenEducationPopup(false)} />
+
+
+
+                            <div className="line-area">
+                                <div className="line2">
+
+                                </div>
+                            </div>
+                            <div className="box" onMouseEnter={() => setStepActive(2)} onMouseLeave={() => setStepActive(0)} onClick={() => {
+                                setOpenEducationPopup(true);
+                            }
+
+
+                            }>
+                                {roadmapStep === 2 ?
+                                    <div className="step-count">
+                                        2
+                                    </div>
+                                    : roadmapStep === 1 ?
+                                        <div className="image-container step-count">
+                                            <img src={LockIcon} alt="lock icon" />
+                                        </div>
+                                        : null
+                                }
+
+                                {stepActive === 0 ?
+                                    <div></div>
+                                    : stepActive === 2 ?
+
+                                        <div className="step-description">
+                                            Trend Çizgileri Nedir?
+                                        </div>
+                                        : null
+                                }
+
+
+
+                            </div>
+                            <div className="line-area">
+                                <div className={roadmapStep === 2 ? "line2  bgcolorwhite" : "line2"}>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div className="box" onMouseEnter={() => setStepActive(3)} onMouseLeave={() => setStepActive(0)} onClick={() => {
+                                setOpenEducationPopup(true);
+                            }
+
+
+                            }>
+                                {roadmapStep === 3 ?
+                                    <div className="step-count">
+                                        3
+                                    </div>
+                                    : roadmapStep === 1 || 2 ?
+                                        <div className="image-container step-count borderPurple">
+                                            <img src={LockIcon} alt="lock icon" />
+                                        </div>
+                                        : null
+                                }
+
+                                {stepActive === 0 ?
+                                    <div></div>
+                                    : stepActive === 3 ?
+
+                                        <div className="step-description">
+                                            Quiz 1 : Teknik Analiz 101
+                                        </div>
+                                        : null
+                                }
+
+
+
+                            </div>
+                        </div>
+                        <div className="horizontal-line-area">
+                            <div className="horizontal-line"></div>
+                        </div>
+                        <div className="row">
+                            <div className="box" onClick={() => setWhichStep(6)}>
+                                <div className="image-container">
+                                    <img src={LockIcon} alt="lock icon" />
+                                </div>
+                            </div>
+                            <div className="line-area">
+                                <div className="line2">
+
+                                </div>
+                            </div>
+                            <div className="box">
+                                <div className="image-container">
+                                    <img src={LockIcon} alt="lock icon" />
+                                </div>
+                            </div>
+                            <div className="line-area">
+                                <div className="line2">
+
+                                </div>
+                            </div>
+                            <div className="box">
+                                <div className="image-container">
+                                    <img src={LockIcon} alt="lock icon" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </section>
+
         </section>
+
     )
 }

@@ -4,12 +4,19 @@ import TwitterIcon from "../img/twitter-icon.png"
 import YoutubeIcon from "../img/youtube-icon.png"
 import TelegramIcon from "../img/telegram-icon.png"
 import DiscordIcon from "../img/discord-icon.png"
+import RibuLogo from "../img/Logo.png"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
     return (
     <footer>
         <div className="column">
-            <div className="row" id="logo">RIBU LOGO</div>
+            <div className="row" id="logo">
+                <Link to="/">
+                <img src={RibuLogo} alt = "Ribu logo"/>
+                </Link>
+                <div>Ribu</div>
+            </div>
             <div className="row">
                 <p>support@ribu.io</p>
                 <p>Telefon</p>

@@ -15,7 +15,7 @@ export default function WhyRibu() {
 
                 <div className="why-ribu-title">
                     <div className="ribu-bigger-logo"><img src={RibuBiggerLogo} alt="ribu logo"/></div>
-                    <div className="why-ribu-slogan">Why Ribu?</div>
+                    <div className="why-ribu-slogan">Neden Ribu?</div>
                 </div>
 
                 <div className="cards-area">

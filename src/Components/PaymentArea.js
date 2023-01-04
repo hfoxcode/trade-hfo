@@ -1,10 +1,50 @@
 import React, { useState } from "react"
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import paymentBackgroundImage from "../img/payment-credit-card-icon.png";
 import MetamaskLogo from "../img/MetaMask-Logo.png"
+import axios from "axios";
+import { useEffect } from "react";
+import Cookies from "universal-cookie"
+import jwtDecode from "jwt-decode";
+
 
 export default function PaymentArea() {
     const [activePage, setActivePage] = useState(false);
+    const [userId, setUserId] = useState();
+
+    const client = axios.create({
+        baseURL: "https://ribu-backend.civitaseterna.com"
+    });
+
+    useEffect(() => {
+        const cookies = new Cookies();
+        const token = cookies.get('token');
+
+
+        if (token) {
+            const user = jwtDecode(token);
+            console.log(user.name);
+            setUserId(user.name);
+            // Make the Axios request inside the setUserId callback
+        }
+    }, []);
+
+
+    function handleChallengeUpgrade() {
+        axios.post(`https://ribu-backend.civitaseterna.com/User/UserChallengeLvlUp?userId=${userId}`)
+          .then(response => {
+            console.log(response);
+            // Burada, istek başarılı bir şekilde tamamlandığında yapılacak işlemleri yazabilirsiniz.
+            // Örneğin, kullanıcının zorluk seviyesi yükseltilmişse, bunu kullanıcıya bildirebilirsiniz.
+          })
+          .catch(error => {
+            console.log(error);
+            // Burada, istek sırasında bir hata oluştuğunda yapılacak işlemleri yazabilirsiniz.
+            // Örneğin, hata mesajını kullanıcıya gösterebilir veya hata loglamak isteyebilirsiniz.
+          });
+      }
+
+
     return (
         <section className="payment-area">
             <div className="column">
@@ -33,7 +73,7 @@ export default function PaymentArea() {
 
                                     <input type="text" name="expiration-date" placeholder="Expiration Date" />
 
-                                    <input type="text" name="cvc-cvv" placeholder="CVC/CCV" />
+                                    <input type="text" className="width250px" name="cvc-cvv" placeholder="CVC/CCV" />
                                 </div>
 
                                 <div className="checkbox-area">
@@ -52,7 +92,10 @@ export default function PaymentArea() {
                                 {/* {errors.exampleRequired && <span>This field is required</span>} */}
 
                                 <div className="sign-up-area">
-                                    <input type="submit" name="submit" class="Sing Up" value="Pay Now" />
+                                    <Link to="/user-dashboard">
+                                        <input type="submit" name="submit" class="Sing Up" value="Pay Now" onClick={() => handleChallengeUpgrade()} />
+                                    </Link>
+
                                 </div>
 
 
@@ -61,11 +104,13 @@ export default function PaymentArea() {
 
                             <>
                                 <div className="metamask-logo">
-                                    <img src={MetamaskLogo} alt="metamask logo"/>
+                                    <img src={MetamaskLogo} alt="metamask logo" />
 
                                 </div>
-                                <div className="button width164px fja">
-                                    Pay with Metamask
+                                <div className="button width164px fja" onClick={() => handleChallengeUpgrade()}>
+                                    <Link to="/user-dashboard" >
+                                        Pay with Metamask
+                                    </Link>
                                 </div>
                             </>
 

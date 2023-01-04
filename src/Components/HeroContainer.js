@@ -1,8 +1,9 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import illustration1 from "../img/illustration1.png"
 
 export default function HeroContainer() {
-    
+
     return (
         <section className="hero-container">
             <div className="column-1">
@@ -18,11 +19,12 @@ export default function HeroContainer() {
                     <div className="slogan">
                         "Neque porro quisquam est qui dolorem ipsum quia dolornp sit amet, consectetur, adipisci velit..."
                     </div>
-                    <div className="insideButton" id="insideBtn">
-                        Explore
 
-
-                    </div>
+                    <Link to="how-it-works-detailed">
+                        <div className="insideButton" id="insideBtn">
+                            Keşfet
+                        </div>
+                    </Link>
                 </div>
 
 

@@ -1,24 +1,28 @@
 import React, { useEffect, useRef } from "react"
 import axios from "axios"
 import Logo from "../img/Logo.png"
+import { redirect, useNavigate } from "react-router"
+import DirectToLogin from "../Components/DirectToLogin"
 
 export default function Register() {
     const username = useRef()
     const password = useRef()
-    const accountBalance = useRef()
+    const startingBalance = useRef();
 
     const headers = {
         'Content-Type': 'text/plain'
     };
 
     const signUp = async function (data) {
-        const str = `?username=${data.username}&password=${data.password}&accountBalance=${data.accountBalance}`
+        const str = `?username=${data.username}&password=${data.password}&startingBalance=10000`
         try {
             const response = await axios.post(
-                "https://localhost:7087/User" + str,
+                "https://ribu-backend.civitaseterna.com/User" + str,
                 { headers }
             );
-            alert("register")
+            if(response.data.message === "User Added!") {
+                window.location.replace("/login")
+            }
             return response.data;
         } catch (error) {
             console.log(error);
@@ -29,7 +33,6 @@ export default function Register() {
         let data = {
             username: username.current.value,
             password: password.current.value,
-            accountBalance: accountBalance.current.value
         }
         console.log(data);
         signUp(data)
@@ -69,8 +72,6 @@ export default function Register() {
                                         <input type="email" name="email" placeholder="Email" />
 
                                         <input type="text" name="password" placeholder="Password" ref={password} />
-
-                                        <input type="text" name="accountbalance" placeholder="Account Balance" ref={accountBalance} />
 
                                     </div>
 

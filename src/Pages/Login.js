@@ -56,7 +56,7 @@ export default function Login() {
     const [errorx, setErrorx] = useState();
 
     const client = axios.create({
-        baseURL: "https://localhost:7087"
+        baseURL: "https://ribu-backend.civitaseterna.com"
     });
 
 
@@ -86,7 +86,8 @@ export default function Login() {
                     const token = res.data.token;
                     const user = jwtDecode(token);
                     setStatus(res.data.status);
-                    localStorage.setItem('token', token);
+                    const cookies = new Cookies();
+                    cookies.set('token', token, { path: '/' });
 
                     setUserToken(token);
                     setUser(user);
@@ -105,18 +106,21 @@ export default function Login() {
         };
         fetchPost();
 
-        
-            
-        
+
+
+
 
 
     }
 
-    
-    
-    const cookies = new Cookies();
-    cookies.set('token', userToken, { path: '/' });
-    
+    function handleNavigate() {
+        window.location.replace("/");
+    }
+
+
+
+
+
     // Pacman
 
 
@@ -132,6 +136,8 @@ export default function Login() {
     console.log(userInfo);
 
     console.log(status);
+
+
 
 
     // console.log(loginPosts);
@@ -184,7 +190,7 @@ export default function Login() {
                         </div>
                         <div className="checkbox-area">
                             <div className="remember-me-checkbox">
-                                <input type="checkbox" id="remember-me" name="remember-me" value="Remember Me" />
+                                <input type="checkbox" id="correct" name="correct" value="Correct" />
                                 <label for="remember-me"> Remember me </label>
                             </div>
                             <div className="forgot-password-area">
@@ -205,9 +211,9 @@ export default function Login() {
                         </Link></div>
                     </div>
 
-                    {status === true ? <Navigate to="/intro-roadmap" replace={true} /> :errorx ? <>USER INFO ERROR</>  : null}
+                    {status === true ? handleNavigate() : errorx ? <>USER INFO ERROR</> : null}
 
-                    
+
                 </div>
             </div>
 

@@ -1,8 +1,12 @@
 import React from "react"
+import RibuBiggerLogo from "../img/ribu-bigger-logo.png"
 
 export default function AboutUs() {
     return (
         <section className="about-us">
+            <div className="image-area">
+                <img src={RibuBiggerLogo} alt = "ribu bigger logo"/>
+            </div>
             <div className="about-us-container">
                 <div className="title">
 
